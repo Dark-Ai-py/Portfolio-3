@@ -1,120 +1,139 @@
 //title
 
 //personal
-const card1 = document.getElementById('card-1'); 
-const card2 = document.getElementById('card-2');
-const card3 = document.getElementById('card-3');
-const name1 = document.getElementById('name-1');
-const name2 = document.getElementById('name-2');
-const name3 = document.getElementById('name-3');
-const text1 = document.getElementById('1');
-const text2 = document.getElementById('2');
-const text3 = document.getElementById('3');
-const content1 = document.getElementById('co-1');
-const content2 = document.getElementById('co-2');
-const content3 = document.getElementById('co-3');
+const cards = document.querySelectorAll(".card");
+const names = document.querySelectorAll(".name");
+const text = document.querySelectorAll(".short-des");
+const content = document.querySelectorAll(".content");
 var cardOpen = 0;
 var holdCard = false;
 function open(card, num) {
-  name1.style.opacity = '1';
-  name2.style.opacity = '1';
-  name3.style.opacity = '1';
-  text1.style.opacity = '1';
-  text2.style.opacity = '1';
-  text3.style.opacity = '1';
+  names.forEach((item) => {
+    item.style.opacity = "1";
+  });
+  text.forEach((item) => {
+    item.style.opacity = "1";
+  });
   card.style.width = "60vw";
-  switch(num) {
+  switch (num) {
     case 1:
-      card2.style.width = "15vw";
-      card3.style.width = "15vw";
-      name2.style.opacity = '0';
-      name3.style.opacity = '0';
-      text2.style.opacity = '0';
-      text3.style.opacity = '0';
-      content1.style.transform = "translate(-2px, -75px)";
+      cards.forEach((items) => {
+        if (items == cards[1] || items == cards[2]) {
+          items.style.width = "15vw";
+        }
+      });
+      names.forEach((items) => {
+        if (items == names[1] || items == names[2]) {
+          items.style.opacity = "0";
+        }
+      });
+      text.forEach((items) => {
+        if (items == text[1] || items == text[2]) {
+          items.style.opacity = "0";
+        }
+      });
+      content[0].style.transform = "translate(-2px, -90px)";
       break;
     case 2:
-      card1.style.width = "15vw";
-      card3.style.width = "15vw";
-      name1.style.opacity = '0';
-      name3.style.opacity = '0';
-      text1.style.opacity = '0';
-      text3.style.opacity = '0';
-      content2.style.transform = "translate(-2px, -75px)";
+      cards.forEach((items) => {
+        if (items == cards[0] || items == cards[2]) {
+          items.style.width = "15vw";
+        }
+      });
+      names.forEach((items) => {
+        if (items == names[0] || items == names[2]) {
+          items.style.opacity = "0";
+        }
+      });
+      text.forEach((items) => {
+        if (items == text[0] || items == text[2]) {
+          items.style.opacity = "0";
+        }
+      });
+      content[1].style.transform = "translate(-2px, -90px)";
       break;
     case 3:
-      card1.style.width = "15vw";
-      card2.style.width = "15vw";
-      name1.style.opacity = '0';
-      name2.style.opacity = '0';
-      text1.style.opacity = '0';
-      text2.style.opacity = '0';
-      content3.style.transform = "translate(-2px, -75px)";
+      cards.forEach((items) => {
+        if (items == cards[0] || items == cards[1]) {
+          items.style.width = "15vw";
+        }
+      });
+      names.forEach((items) => {
+        if (items == names[0] || items == names[1]) {
+          items.style.opacity = "0";
+        }
+      });
+      text.forEach((items) => {
+        if (items == text[0] || items == text[1]) {
+          items.style.opacity = "0";
+        }
+      });
+      content[2].style.transform = "translate(-2px, -90px)";
       break;
   }
-};
-function close() {
-  if(holdCard === false) {
-  card1.style.width = "30vw";
-  card2.style.width = "30vw";
-  card3.style.width = "30vw";
-  name1.style.opacity = '1';
-  name2.style.opacity = '1';
-  name3.style.opacity = '1';
-  text1.style.opacity = '1';
-  text2.style.opacity = '1';
-  text3.style.opacity = '1';
-  content1.style.transform = "translate(-130%, -25px)";
-  content2.style.transform = "translate(-130%, -25px)";
-  content3.style.transform = "translate(-130%, -25px)";
+}
+function close(now) {
+  if (holdCard === false || now === 1) {
+    cards.forEach((item) => {
+      item.style.width = "30vw";
+    });
+    names.forEach((item) => {
+      item.style.opacity = "1";
+    });
+    text.forEach((item) => {
+      item.style.opacity = "1";
+    });
+    content.forEach((item) => {
+      item.style.transform = "translate(-130%, -90px)";
+    });
   }
-};
+}
 //card1
-card1.addEventListener("mouseover", () => {
-  open(card1, 1);
-  if(cardOpen !== 1) {
-  holdCard = false;
+cards[0].addEventListener("mouseover", () => {
+  if (cardOpen !== 1) {
+    holdCard = false;
+    close(1);
   }
+  open(cards[0], 1);
   cardOpen = 1;
-})
-card1.addEventListener("click", () => {
+});
+cards[0].addEventListener("click", () => {
   holdCard = true;
-})
-card1.addEventListener("mouseleave", () => {
-  close();
-})
+});
+cards[0].addEventListener("mouseleave", () => {
+  close(0);
+});
 
 //card2
-card2.addEventListener("mouseover", () => {
-  open(card2, 2);
-  if(cardOpen !== 2) {
-  holdCard = false;
+cards[1].addEventListener("mouseover", () => {
+  if (cardOpen !== 2) {
+    holdCard = false;
+    close(1);
   }
+  open(cards[1], 2);
   cardOpen = 2;
-})
-card2.addEventListener("click", () => {
+});
+cards[1].addEventListener("click", () => {
   holdCard = true;
-})
-card2.addEventListener("mouseleave", () => {
-  close();
-})
+});
+cards[1].addEventListener("mouseleave", () => {
+  close(0);
+});
 //card3
-card3.addEventListener("mouseover", () => {
-  open(card3, 3);
-  if(cardOpen !== 3) {
-  holdCard = false;
+cards[2].addEventListener("mouseover", () => {
+  if (cardOpen !== 3) {
+    holdCard = false;
+    close(1);
   }
+  open(cards[2], 3);
   cardOpen = 3;
-})
-card3.addEventListener("click", () => {
+});
+cards[2].addEventListener("click", () => {
   holdCard = true;
-})
-card3.addEventListener("mouseleave", () => {
-  close();
-})
-
-
-
+});
+cards[2].addEventListener("mouseleave", () => {
+  close(0);
+});
 
 //projects
 

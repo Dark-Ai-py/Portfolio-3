@@ -9,70 +9,71 @@ Title section
 
 /*personal section*/
 #container {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    gap: 1vw;
-    margin: auto;
-  }
-  .card {
-    height: 80vh;
-    width: 30vw;
-    border-radius: 1rem;
-    transition: all 0.4s cubic-bezier(.46,.3,.26,.26);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-  }
-  #card-1 {
-    background-image: url('https://t4.ftcdn.net/jpg/05/72/82/85/360_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg');
-    background-size: cover;
-    background-position: center;
-  }
-  #card-2 {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6-DQF2pBwNFV9KzPafu9RghrNF1tZ8J3AA&usqp=CAU');
-    background-size: cover;
-    background-position: center;
-  }
-  #card-3 {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOmAWVn3nZXs19RBmTVeuHXSmc2Z53B23t_w&usqp=CAU');
-    background-size: cover;
-    background-position: center;
-  }
-  .name {
-    font-family: Garamond, serif;
-    color: white;
-    font-size: 2.5rem;
-    padding-left: 5%;
-    transition: opacity 0.2s cubic-bezier(.46,.3,.26,.26);
-  }
-  .short-des {
-    font-family: Garamond, serif;
-    color: white;
-    font-size: 1rem;
-    padding-bottom: 5vh;
-    padding-left: 5%;
-    transition: opacity 0.2s cubic-bezier(.46,.3,.26,.26);
-  }
-  .content {
-    font-family: Garamond, serif;
-    width: 90%;
-    height: 50%;
-    background-color: rgba(255, 255, 255, 0.6);
-    z-index: 5;
-    grid-area: d;
-    transform: translate(-130%, -80px);
-    transition: transform 0.5s cubic-bezier(.2,.18,.63,.96);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    border: white 2px double;
-    font-size: 2rem;
-  }
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  gap: 1vw;
+  margin: auto;
+}
+.card {
+  height: 80vh;
+  width: 30vw;
+  border-radius: 1rem;
+  transition: all 0.4s cubic-bezier(0.46, 0.3, 0.26, 0.26);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+#card-1 {
+  background-image: url("https://t4.ftcdn.net/jpg/05/72/82/85/360_F_572828530_ofzCYowQVnlOwkcoBJnZqT36klbJzWdn.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#card-2 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6-DQF2pBwNFV9KzPafu9RghrNF1tZ8J3AA&usqp=CAU");
+  background-size: cover;
+  background-position: center;
+}
+#card-3 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOmAWVn3nZXs19RBmTVeuHXSmc2Z53B23t_w&usqp=CAU");
+  background-size: cover;
+  background-position: center;
+}
+.name {
+  font-family: Garamond, serif;
+  color: white;
+  font-size: 2.5rem;
+  padding-left: 5%;
+  transition: opacity 0.2s cubic-bezier(0.46, 0.3, 0.26, 0.26);
+}
+.short-des {
+  font-family: Garamond, serif;
+  color: white;
+  font-size: 1rem;
+  padding-bottom: 5vh;
+  padding-left: 5%;
+  transition: opacity 0.2s cubic-bezier(0.46, 0.3, 0.26, 0.26);
+}
+.content {
+  font-family: Garamond, serif;
+  width: 90%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 5;
+  grid-area: d;
+  transform: translate(-130%, -90px);
+  transition: transform 0.5s cubic-bezier(0.2, 0.18, 0.63, 0.96);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: white 2px double;
+  font-size: 2rem;
+}
+
 /*projects section*/
 
 /*contacts section*/
